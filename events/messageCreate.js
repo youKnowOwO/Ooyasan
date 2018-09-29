@@ -8,7 +8,7 @@ module.exports = (client, msg) => {
 	
 	const cmd = client.commands.get(command) || client.commands.get(client.aliases.get(command));
 	if(!cmd) return undefined;
-	if(!parseCmd(client, msg, cmd.info) return undefined;
+	if(!parseCmd(client, msg, cmd.info)) return undefined;
 	return cmd.run(client, msg, args);
 }
 
