@@ -5,6 +5,7 @@ class OoyasanClient extends Client {
 	constructor(...args){
 		super(...args);
 		
+		this.config = require('../config.json');
 		this.commands = Commands;
 		this.aliases = Aliases;
 		this.cooldowns = new Collection;
