@@ -1,0 +1,25 @@
+{
+	"name": "Ooyasan",
+	"version": "0.0.1",
+	"description": "Ooyasan, an easy to understand bot, based on Eris Library",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/youKnowOwO/Ooyasan"
+	},
+	"engines": {
+		"node": "8.11.3"
+	},
+	"author": "youKnowOwO",
+	"license": "MIT",
+	"dependencies": {
+		"zlib-sync": "^0.1.4",
+		"eventemitter3": "^3.1.0",
+		"erlpack": "discordapp/erlpack",
+		"eris": "^0.8.6",
+		"uws": "^10.148.1"
+	}
+}
