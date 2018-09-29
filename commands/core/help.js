@@ -8,6 +8,7 @@ exports.run = async (client, msg, args) => {
 		.setColor(Math.floor(Math.random()*0xFFFFFF))
 		.setTitle(`📁 Command help for ${info.name}`)
 		.setDescription(info.description || 'No description provided')
+		.addField('Usage', info.usage || 'No usage provided')
 		.addField('Aliases', info.aliases.map(x => `\`${x}\``).join(', ') || 'No aliases provided')
 		.addField('Cooldown', `${info.cooldown}s`);
 		
@@ -32,6 +33,7 @@ function toPlural(str){
 exports.info = {
 	name: 'help',
 	description: 'the first command you\'ll typing',
+	usage: 'help [command]',
 	aliases: ['h'],
 	ownerOnly: false,
 	cooldown: 3
