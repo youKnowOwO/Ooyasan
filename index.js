@@ -11,4 +11,4 @@ client.connect();
 
 process.on('error', e => console.error('[ERROR]', e));
 process.on('uncaughtException', e => console.error('[UNCAUGHT EXCEPTION]', e));
-process.en('unhandledRejection', e => console.error('[UNHANDLED REJECTION]', e));
+process.on('unhandledRejection', e => console.error('[UNHANDLED REJECTION]', e));
