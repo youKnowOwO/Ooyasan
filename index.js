@@ -4,7 +4,7 @@ const Client = require('./structures/Client.js');
 const client = new Client(process.env.TOKEN);
 
 for (const event of readdirSync('./events')) {
-	client.on(event.split('.')[0], require(`./events/${event}`).bind(null, client, ...args));
+	client.on(event.split('.')[0], (...args) => require(`./events/${event}`)(client, ...args));
 }
 
 client.connect();
