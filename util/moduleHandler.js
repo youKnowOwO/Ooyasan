@@ -6,7 +6,7 @@ const Aliases = new Collection();
 
 for(const module of readdirSync('./commands')){
 	console.log(`Load module ${module}....`);
-	for(const command of readdirSync(`./commands/${module}`).filter(x => x.endsWith('.js')){
+	for(const command of readdirSync(`./commands/${module}`).filter(x => x.endsWith('.js'))){
 		const cmd = require(`../commands/${module}/${command}`);
 		console.log(`Loading command ${cmd.info.name} ...`);
 		cmd.info.category = module;
